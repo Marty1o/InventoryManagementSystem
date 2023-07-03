@@ -102,7 +102,7 @@
             usernameTB.Name = "usernameTB";
             usernameTB.Size = new Size(204, 29);
             usernameTB.TabIndex = 1;
-            usernameTB.Text = "username";
+            usernameTB.PlaceholderText = "Username";
             // 
             // phoneTB
             // 
@@ -112,7 +112,7 @@
             phoneTB.Name = "phoneTB";
             phoneTB.Size = new Size(204, 29);
             phoneTB.TabIndex = 2;
-            phoneTB.Text = "Phone";
+            phoneTB.PlaceholderText = "Phone";
             // 
             // passwordTB
             // 
@@ -122,7 +122,7 @@
             passwordTB.Name = "passwordTB";
             passwordTB.Size = new Size(204, 29);
             passwordTB.TabIndex = 3;
-            passwordTB.Text = "password";
+            passwordTB.PlaceholderText = "Password";
             // 
             // fullNameTB
             // 
@@ -132,7 +132,7 @@
             fullNameTB.Name = "fullNameTB";
             fullNameTB.Size = new Size(204, 29);
             fullNameTB.TabIndex = 4;
-            fullNameTB.Text = "full name";
+            fullNameTB.PlaceholderText = "Full Name";
             // 
             // emailTB
             // 
@@ -142,7 +142,7 @@
             emailTB.Name = "emailTB";
             emailTB.Size = new Size(204, 29);
             emailTB.TabIndex = 5;
-            emailTB.Text = "email";
+            emailTB.PlaceholderText = "Email";
             // 
             // addUserBT
             // 

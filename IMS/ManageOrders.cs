@@ -18,7 +18,7 @@ namespace IMS
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void ExitAppLabel_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -134,16 +134,6 @@ namespace IMS
             table.Columns.Add("totprice", typeof(int));
         }
 
-        private void orderIdTB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CustomersGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (CustomersGV.SelectedRows.Count > 0)
@@ -255,11 +245,6 @@ namespace IMS
         {
             ViewOrders view = new ViewOrders();
             view.Show();
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)

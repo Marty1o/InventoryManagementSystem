@@ -100,43 +100,34 @@ namespace IMS
             populate();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void ExitAppLabel_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void addCustomerBT_Click(object sender, EventArgs e)
+        private void addProductBT_Click(object sender, EventArgs e)
         {
-            try
+            if (ValidateInput())
             {
-                Con.Open();
-                SqlCommand cmd = new SqlCommand("insert into ProductTable values('" + productIdTB.Text + "','" + prodNameTB.Text + "','" + prodQuantityTB.Text + "','" + prodPriceTB.Text + "','" + prodDesTB.Text + "','" + prodCategoryCB.SelectedValue.ToString() + "')", Con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Product has successfully been added!");
-                Con.Close();
-                populate();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error updating user: " + ex.Message);
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("insert into ProductTable values('" + productIdTB.Text + "','" + prodNameTB.Text + "','" + prodQuantityTB.Text + "','" + prodPriceTB.Text + "','" + prodDesTB.Text + "','" + prodCategoryCB.SelectedValue.ToString() + "')", Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product has successfully been added!");
+                    Con.Close();
+                    populate();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating user: " + ex.Message);
+                }
             }
         }
 
-        private void deleteCustomerBT_Click(object sender, EventArgs e)
+        private void deleteProductBT_Click(object sender, EventArgs e)
         {
-            if (productIdTB.Text == "")
-            {
-                MessageBox.Show("Please enter a valid product id number!");
-                return;
-            }
-
-            else if (Regex.IsMatch(productIdTB.Text, "[a-zA-Z]"))
-            {
-                MessageBox.Show("Textbox contains alphabetical characters.");
-                return;
-            }
-
-            else
+            if (ValidateInput())
             {
                 try
                 {
@@ -155,7 +146,6 @@ namespace IMS
                 {
                     MessageBox.Show("Error deleting user: " + ex.Message);
                 }
-
             }
         }
 
@@ -174,20 +164,23 @@ namespace IMS
             //MessageBox.Show(CustomersGV.SelectedRows.Count.ToString());
         }
 
-        private void editCustomerBT_Click(object sender, EventArgs e)
+        private void editProductBT_Click(object sender, EventArgs e)
         {
-            try
+            if (ValidateInput())
             {
-                Con.Open();
-                SqlCommand cmd = new SqlCommand("update ProductTable set ProductName = '" + prodNameTB.Text + "', ProductQuantity = '" + prodQuantityTB.Text + "', ProductPrice = '" + prodPriceTB.Text + "', ProductDescription = '" + prodDesTB.Text + "', ProductionCat = '" + prodCategoryCB.SelectedValue.ToString() + "' where ProductId = '" + productIdTB.Text + "'", Con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Product has successfully been updated!");
-                Con.Close();
-                populate();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error updating user: " + ex.Message);
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("update ProductTable set ProductName = '" + prodNameTB.Text + "', ProductQuantity = '" + prodQuantityTB.Text + "', ProductPrice = '" + prodPriceTB.Text + "', ProductDescription = '" + prodDesTB.Text + "', ProductionCat = '" + prodCategoryCB.SelectedValue.ToString() + "' where ProductId = '" + productIdTB.Text + "'", Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Product has successfully been updated!");
+                    Con.Close();
+                    populate();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating user: " + ex.Message);
+                }
             }
         }
 
@@ -201,11 +194,75 @@ namespace IMS
             populate();
         }
 
-        private void CusHomeBT_Click(object sender, EventArgs e)
+        private void ProdHomeBT_Click(object sender, EventArgs e)
         {
             HomeForm prod = new HomeForm();
             prod.Show();
             this.Hide();
+        }
+
+        private bool ValidateInput()
+        {
+
+            //empty check
+            if (string.IsNullOrWhiteSpace(productIdTB.Text))
+            {
+                MessageBox.Show("Please enter a value into the Product ID text box.");
+                productIdTB.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(prodNameTB.Text))
+            {
+                MessageBox.Show("Please enter a name into the Product Name text box.");
+                prodNameTB.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(prodQuantityTB.Text))
+            {
+                MessageBox.Show("Please enter a number into the Quantity text box.");
+                prodQuantityTB.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(prodPriceTB.Text))
+            {
+                MessageBox.Show("Please enter a number into the Product Price text box.");
+                prodPriceTB.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(prodDesTB.Text))
+            {
+                MessageBox.Show("Please enter a description into the description text box.");
+                prodDesTB.Focus();
+                return false;
+            }
+
+            //int check
+            if (Regex.IsMatch(productIdTB.Text, "[a-zA-Z]"))
+            {
+                MessageBox.Show("Textbox contains alphabetical characters. Please enter a valid ID number.");
+                productIdTB.Focus();
+                return false;
+            }
+
+            if (Regex.IsMatch(prodQuantityTB.Text, "[a-zA-Z]"))
+            {
+                MessageBox.Show("Textbox contains alphabetical characters. Please enter a valid quantity number.");
+                prodQuantityTB.Focus();
+                return false;
+            }
+
+            if (Regex.IsMatch(prodPriceTB.Text, "[a-zA-Z]"))
+            {
+                MessageBox.Show("Textbox contains alphabetical characters. Please enter a valid Price.");
+                prodPriceTB.Focus();
+                return false;
+            }
+
+            return true;
         }
     }
 }

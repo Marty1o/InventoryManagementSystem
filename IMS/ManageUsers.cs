@@ -44,19 +44,23 @@ namespace IMS
         private void addUserBT_Click(object sender, EventArgs e)
         {
 
-            try
+            if (ValidateInput())
             {
-                Con.Open();
-                SqlCommand cmd = new SqlCommand("insert into UserTable values('" + usernameTB.Text + "','" + emailTB.Text + "','" + fullNameTB.Text + "','" + passwordTB.Text + "','" + phoneTB.Text + "')", Con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("User has successfully been added!");
-                Con.Close();
-                populate();
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("insert into UserTable values('" + usernameTB.Text + "','" + emailTB.Text + "','" + fullNameTB.Text + "','" + passwordTB.Text + "','" + phoneTB.Text + "')", Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("User has successfully been added!");
+                    Con.Close();
+                    populate();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating user: " + ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error updating user: " + ex.Message);
-            }
+
         }
 
         private void ManageUsers_Load(object sender, EventArgs e)
@@ -66,17 +70,7 @@ namespace IMS
 
         private void deleteUserBT_Click(object sender, EventArgs e)
         {
-            if (phoneTB.Text == "" || phoneTB.Text.Length != 10)
-            {
-                MessageBox.Show("Please enter a phone number!");
-            }
-
-            if (Regex.IsMatch(phoneTB.Text, "[a-zA-Z]"))
-            {
-                MessageBox.Show("Textbox contains alphabetical characters.");
-            }
-
-            else
+            if (ValidateInput())
             {
                 try
                 {
@@ -95,7 +89,6 @@ namespace IMS
                 {
                     MessageBox.Show("Error deleting user: " + ex.Message);
                 }
-
             }
         }
 
@@ -116,18 +109,21 @@ namespace IMS
 
         private void editUserBT_Click(object sender, EventArgs e)
         {
-            try
+            if (ValidateInput())
             {
-                Con.Open();
-                SqlCommand cmd = new SqlCommand("update UserTable set username = '" + usernameTB.Text + "', Uemail = '" + emailTB.Text + "', Ufullname = '" + fullNameTB.Text + "', Upassword = '" + passwordTB.Text + "' where Uphone = '" + phoneTB.Text + "'", Con);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("User has successfully been updated!");
-                Con.Close();
-                populate();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error updating user: " + ex.Message);
+                try
+                {
+                    Con.Open();
+                    SqlCommand cmd = new SqlCommand("update UserTable set username = '" + usernameTB.Text + "', Uemail = '" + emailTB.Text + "', Ufullname = '" + fullNameTB.Text + "', Upassword = '" + passwordTB.Text + "' where Uphone = '" + phoneTB.Text + "'", Con);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("User has successfully been updated!");
+                    Con.Close();
+                    populate();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating user: " + ex.Message);
+                }
             }
         }
 
@@ -136,6 +132,54 @@ namespace IMS
             HomeForm prod = new HomeForm();
             prod.Show();
             this.Hide();
+        }
+
+        private bool ValidateInput()
+        {
+            if (string.IsNullOrWhiteSpace(usernameTB.Text))
+            {
+                MessageBox.Show("Please enter a value into the Username text box.");
+                usernameTB.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(emailTB.Text))
+            {
+                MessageBox.Show("Please enter a value into the Email text box.");
+                emailTB.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(fullNameTB.Text))
+            {
+                MessageBox.Show("Please enter a value into the Name text box.");
+                fullNameTB.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(passwordTB.Text))
+            {
+                MessageBox.Show("Please enter a value into the Password text box.");
+                passwordTB.Focus();
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(phoneTB.Text))
+            {
+                MessageBox.Show("Please enter a value into the Phone Number text box.");
+                phoneTB.Focus();
+                return false;
+            }
+
+            if (Regex.IsMatch(phoneTB.Text, "[a-zA-Z]"))
+            {
+                MessageBox.Show("Textbox contains alphabetical characters. Please enter a valid Phone number.");
+                phoneTB.Focus();
+                return false;
+            }
+
+            
+
+            return true;
         }
     }
 }

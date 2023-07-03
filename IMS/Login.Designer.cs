@@ -1,6 +1,6 @@
 ﻿namespace IMS
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,45 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            panel1 = new Panel();
-            pictureBox1 = new PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            InnerLoginPanel = new Panel();
+            LogoPB = new PictureBox();
             showPasswordCheckbox = new CheckBox();
             clearLabel = new Label();
             loginBT = new Button();
             passwordTB = new TextBox();
             usernameTB = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            LoginTitleLabel = new Label();
+            AppNameLabel = new Label();
+            ExitAppLabel = new Label();
+            InnerLoginPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)LogoPB).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // InnerLoginPanel
             // 
-            panel1.BackColor = Color.OliveDrab;
-            panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(showPasswordCheckbox);
-            panel1.Controls.Add(clearLabel);
-            panel1.Controls.Add(loginBT);
-            panel1.Controls.Add(passwordTB);
-            panel1.Controls.Add(usernameTB);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(135, 94);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(242, 332);
-            panel1.TabIndex = 0;
+            InnerLoginPanel.BackColor = Color.OliveDrab;
+            InnerLoginPanel.Controls.Add(LogoPB);
+            InnerLoginPanel.Controls.Add(showPasswordCheckbox);
+            InnerLoginPanel.Controls.Add(clearLabel);
+            InnerLoginPanel.Controls.Add(loginBT);
+            InnerLoginPanel.Controls.Add(passwordTB);
+            InnerLoginPanel.Controls.Add(usernameTB);
+            InnerLoginPanel.Controls.Add(LoginTitleLabel);
+            InnerLoginPanel.Location = new Point(135, 94);
+            InnerLoginPanel.Name = "InnerLoginPanel";
+            InnerLoginPanel.Size = new Size(242, 332);
+            InnerLoginPanel.TabIndex = 0;
             // 
-            // pictureBox1
+            // LogoPB
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(87, 48);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(73, 72);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
+            LogoPB.BackColor = Color.Transparent;
+            LogoPB.Image = (Image)resources.GetObject("LogoPB.Image");
+            LogoPB.Location = new Point(87, 48);
+            LogoPB.Name = "LogoPB";
+            LogoPB.Size = new Size(73, 72);
+            LogoPB.SizeMode = PictureBoxSizeMode.StretchImage;
+            LogoPB.TabIndex = 6;
+            LogoPB.TabStop = false;
             // 
             // showPasswordCheckbox
             // 
@@ -108,74 +109,88 @@
             passwordTB.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             passwordTB.Location = new Point(19, 185);
             passwordTB.Name = "passwordTB";
+            passwordTB.PlaceholderText = "Password";
             passwordTB.Size = new Size(200, 29);
             passwordTB.TabIndex = 2;
-            passwordTB.Text = "Password";
             passwordTB.UseSystemPasswordChar = true;
             // 
             // usernameTB
             // 
             usernameTB.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            usernameTB.Location = new Point(19, 126);
+            usernameTB.Location = new Point(19, 140);
             usernameTB.Name = "usernameTB";
+            usernameTB.PlaceholderText = "Username";
             usernameTB.Size = new Size(200, 29);
             usernameTB.TabIndex = 1;
-            usernameTB.Text = "Username";
             // 
-            // label1
+            // LoginTitleLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(90, 15);
-            label1.Name = "label1";
-            label1.Size = new Size(69, 30);
-            label1.TabIndex = 0;
-            label1.Text = "Login";
+            LoginTitleLabel.AutoSize = true;
+            LoginTitleLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            LoginTitleLabel.ForeColor = Color.White;
+            LoginTitleLabel.Location = new Point(90, 15);
+            LoginTitleLabel.Name = "LoginTitleLabel";
+            LoginTitleLabel.Size = new Size(69, 30);
+            LoginTitleLabel.TabIndex = 0;
+            LoginTitleLabel.Text = "Login";
             // 
-            // label2
+            // AppNameLabel
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(143, 34);
-            label2.Name = "label2";
-            label2.Size = new Size(234, 30);
-            label2.TabIndex = 1;
-            label2.Text = "Inventory Managment";
+            AppNameLabel.AutoSize = true;
+            AppNameLabel.BackColor = Color.Transparent;
+            AppNameLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            AppNameLabel.ForeColor = Color.White;
+            AppNameLabel.Location = new Point(143, 34);
+            AppNameLabel.Name = "AppNameLabel";
+            AppNameLabel.Size = new Size(234, 30);
+            AppNameLabel.TabIndex = 1;
+            AppNameLabel.Text = "Inventory Managment";
             // 
-            // Form1
+            // ExitAppLabel
+            // 
+            ExitAppLabel.AutoSize = true;
+            ExitAppLabel.BackColor = Color.Transparent;
+            ExitAppLabel.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            ExitAppLabel.ForeColor = Color.White;
+            ExitAppLabel.Location = new Point(484, -1);
+            ExitAppLabel.Name = "ExitAppLabel";
+            ExitAppLabel.Size = new Size(31, 33);
+            ExitAppLabel.TabIndex = 4;
+            ExitAppLabel.Text = "X";
+            ExitAppLabel.Click += ExitAppLabel_Click;
+            // 
+            // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(514, 471);
-            Controls.Add(label2);
-            Controls.Add(panel1);
+            Controls.Add(ExitAppLabel);
+            Controls.Add(AppNameLabel);
+            Controls.Add(InnerLoginPanel);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Form1";
+            Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += Form1_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            InnerLoginPanel.ResumeLayout(false);
+            InnerLoginPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)LogoPB).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel InnerLoginPanel;
         private Button loginBT;
         private TextBox passwordTB;
         private TextBox usernameTB;
-        private Label label1;
-        private Label label2;
+        private Label LoginTitleLabel;
+        private Label AppNameLabel;
         private CheckBox showPasswordCheckbox;
         private Label clearLabel;
-        private PictureBox pictureBox1;
+        private PictureBox LogoPB;
+        private Label ExitAppLabel;
     }
 }

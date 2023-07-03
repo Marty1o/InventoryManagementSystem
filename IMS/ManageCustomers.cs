@@ -43,30 +43,29 @@ namespace IMS
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label3_Click(object sender, EventArgs e)
+        private void ExitAppLabel_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
         private void addCustomerBT_Click(object sender, EventArgs e)
         {
-            try
+            if (ValidateInput())
             {
-                Con.Open();
-                SqlCommand command = new SqlCommand("insert into CustomerTable values('" + customerIdTB.Text + "','" + CemailTB.Text + "','" + CfullNameTB.Text + "','" + CphoneTB.Text + "')", Con);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Customer has successfully been added!");
-                Con.Close();
-                refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error updating user: " + ex.Message);
+                try
+                {
+                    Con.Open();
+                    SqlCommand command = new SqlCommand("insert into CustomerTable values('" + customerIdTB.Text + "','" + CemailTB.Text + "','" + CfullNameTB.Text + "','" + CphoneTB.Text + "')", Con);
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Customer has successfully been added!");
+                    Con.Close();
+                    refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating user: " + ex.Message);
+                }
             }
         }
 
@@ -108,25 +107,13 @@ namespace IMS
 
         private void deleteCustomerBT_Click(object sender, EventArgs e)
         {
-            if (customerIdTB.Text == "")
-            {
-                MessageBox.Show("Please enter a valid customer id number!");
-                return;
-            }
-
-            else if (Regex.IsMatch(customerIdTB.Text, "[a-zA-Z]"))
-            {
-                MessageBox.Show("Textbox contains alphabetical characters.");
-                return;
-            }
-
-            else
+            if (ValidateInput())
             {
                 try
                 {
                     Con.Open();
 
-                    string query = "delete from CustomerTable where CustomerId = '" + customerIdTB.Text + "';";
+                    string query = "delete from CustomerTable where CustomerId = " + customerIdTB.Text + ";";
                     SqlCommand command = new SqlCommand(query, Con);
                     command.ExecuteNonQuery();
                     MessageBox.Show("Customer has now been deleted");
@@ -139,35 +126,27 @@ namespace IMS
                 {
                     MessageBox.Show("Error deleting user: " + ex.Message);
                 }
-
             }
         }
 
         private void editCustomerBT_Click(object sender, EventArgs e)
         {
-            try
+            if (ValidateInput())
             {
-                Con.Open();
-                SqlCommand command = new SqlCommand("update CustomerTable set CustomerEmail = '" + CemailTB.Text + "', CustomerFullName = '" + CfullNameTB.Text + "', CustomerPhone = '" + CphoneTB.Text + "' where CustomerId = '" + customerIdTB.Text + "'", Con);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Customer has successfully been updated!");
-                Con.Close();
-                refresh();
+                try
+                {
+                    Con.Open();
+                    SqlCommand command = new SqlCommand("update CustomerTable set CustomerEmail = '" + CemailTB.Text + "', CustomerFullName = '" + CfullNameTB.Text + "', CustomerPhone = '" + CphoneTB.Text + "' where CustomerId = '" + customerIdTB.Text + "'", Con);
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Customer has successfully been updated!");
+                    Con.Close();
+                    refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating user: " + ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error updating user: " + ex.Message);
-            }
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void CusHomeBT_Click(object sender, EventArgs e)
@@ -175,6 +154,53 @@ namespace IMS
             HomeForm form = new HomeForm();
             form.Show();
             this.Hide();
+        }
+
+        private bool ValidateInput()
+        {
+            if (string.IsNullOrWhiteSpace(customerIdTB.Text))
+            {
+                MessageBox.Show("Please enter a value into the Customer ID text box.");
+                customerIdTB.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(CemailTB.Text))
+            {
+                MessageBox.Show("Please enter a value into the Email text box.");
+                CemailTB.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(CfullNameTB.Text))
+            {
+                MessageBox.Show("Please enter a value into the Name text box.");
+                CfullNameTB.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(CphoneTB.Text))
+            {
+                MessageBox.Show("Please enter a value into the Phone Number text box.");
+                CphoneTB.Focus();
+                return false;
+            }
+
+            if (Regex.IsMatch(CphoneTB.Text, "[a-zA-Z]"))
+            {
+                MessageBox.Show("Textbox contains alphabetical characters. Please enter a valid Phone number");
+                CphoneTB.Focus();
+                return false;
+            }
+
+            if (Regex.IsMatch(customerIdTB.Text, "[a-zA-Z]"))
+            {
+                MessageBox.Show("Textbox contains alphabetical characters. Please enter a valid Customer ID number");
+                customerIdTB.Focus();
+                return false;
+            }
+
+            return true;
         }
     }
 }

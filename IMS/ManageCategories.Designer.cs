@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            panel1 = new Panel();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            TitleHeaderPanel = new Panel();
             label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            panel2 = new Panel();
+            AppNameLabel = new Label();
+            FormTitleLabel = new Label();
+            FooterPanel = new Panel();
             CategoryGV = new DataGridView();
-            CusHomeBT = new Button();
-            deleteCustomerBT = new Button();
-            editCustomerBT = new Button();
-            addCustomerBT = new Button();
+            CatHomeBT = new Button();
+            deleteCategoryBT = new Button();
+            editCategoryBT = new Button();
+            addCategoryBT = new Button();
             prodCategoryIdTB = new TextBox();
             categoryNameTB = new TextBox();
-            panel1.SuspendLayout();
+            TitleHeaderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CategoryGV).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // TitleHeaderPanel
             // 
-            panel1.BackColor = Color.OliveDrab;
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(780, 107);
-            panel1.TabIndex = 2;
+            TitleHeaderPanel.BackColor = Color.OliveDrab;
+            TitleHeaderPanel.Controls.Add(label3);
+            TitleHeaderPanel.Controls.Add(AppNameLabel);
+            TitleHeaderPanel.Controls.Add(FormTitleLabel);
+            TitleHeaderPanel.Dock = DockStyle.Top;
+            TitleHeaderPanel.Location = new Point(0, 0);
+            TitleHeaderPanel.Name = "TitleHeaderPanel";
+            TitleHeaderPanel.Size = new Size(780, 107);
+            TitleHeaderPanel.TabIndex = 2;
             // 
             // label3
             // 
@@ -70,37 +70,36 @@
             label3.Text = "X";
             label3.Click += label3_Click;
             // 
-            // label2
+            // AppNameLabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(174, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(499, 38);
-            label2.TabIndex = 1;
-            label2.Text = "Inventory Management System";
+            AppNameLabel.AutoSize = true;
+            AppNameLabel.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            AppNameLabel.ForeColor = Color.White;
+            AppNameLabel.Location = new Point(174, 9);
+            AppNameLabel.Name = "AppNameLabel";
+            AppNameLabel.Size = new Size(499, 38);
+            AppNameLabel.TabIndex = 1;
+            AppNameLabel.Text = "Inventory Management System";
             // 
-            // label1
+            // FormTitleLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(246, 58);
-            label1.Name = "label1";
-            label1.Size = new Size(281, 33);
-            label1.TabIndex = 0;
-            label1.Text = "Manage Categories";
-            label1.Click += label1_Click;
+            FormTitleLabel.AutoSize = true;
+            FormTitleLabel.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            FormTitleLabel.ForeColor = Color.White;
+            FormTitleLabel.Location = new Point(246, 58);
+            FormTitleLabel.Name = "FormTitleLabel";
+            FormTitleLabel.Size = new Size(281, 33);
+            FormTitleLabel.TabIndex = 0;
+            FormTitleLabel.Text = "Manage Categories";
             // 
-            // panel2
+            // FooterPanel
             // 
-            panel2.BackColor = Color.OliveDrab;
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 590);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(780, 25);
-            panel2.TabIndex = 13;
+            FooterPanel.BackColor = Color.OliveDrab;
+            FooterPanel.Dock = DockStyle.Bottom;
+            FooterPanel.Location = new Point(0, 590);
+            FooterPanel.Name = "FooterPanel";
+            FooterPanel.Size = new Size(780, 25);
+            FooterPanel.TabIndex = 13;
             // 
             // CategoryGV
             // 
@@ -108,19 +107,19 @@
             CategoryGV.AllowUserToDeleteRows = false;
             CategoryGV.AllowUserToResizeColumns = false;
             CategoryGV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            CategoryGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            CategoryGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             CategoryGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             CategoryGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             CategoryGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.Crimson;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            CategoryGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.Crimson;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            CategoryGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             CategoryGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             CategoryGV.Location = new Point(221, 130);
             CategoryGV.Name = "CategoryGV";
@@ -130,91 +129,91 @@
             CategoryGV.TabIndex = 14;
             CategoryGV.CellContentClick += CategoryGV_CellContentClick;
             // 
-            // CusHomeBT
+            // CatHomeBT
             // 
-            CusHomeBT.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CusHomeBT.Location = new Point(11, 236);
-            CusHomeBT.Name = "CusHomeBT";
-            CusHomeBT.Size = new Size(204, 30);
-            CusHomeBT.TabIndex = 22;
-            CusHomeBT.Text = "HOME";
-            CusHomeBT.UseVisualStyleBackColor = true;
-            CusHomeBT.Click += CusHomeBT_Click;
+            CatHomeBT.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            CatHomeBT.Location = new Point(11, 236);
+            CatHomeBT.Name = "CatHomeBT";
+            CatHomeBT.Size = new Size(204, 30);
+            CatHomeBT.TabIndex = 22;
+            CatHomeBT.Text = "HOME";
+            CatHomeBT.UseVisualStyleBackColor = true;
+            CatHomeBT.Click += CatHomeBT_Click;
             // 
-            // deleteCustomerBT
+            // deleteCategoryBT
             // 
-            deleteCustomerBT.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            deleteCustomerBT.Location = new Point(139, 200);
-            deleteCustomerBT.Name = "deleteCustomerBT";
-            deleteCustomerBT.Size = new Size(76, 30);
-            deleteCustomerBT.TabIndex = 21;
-            deleteCustomerBT.Text = "DELETE";
-            deleteCustomerBT.UseVisualStyleBackColor = true;
-            deleteCustomerBT.Click += deleteCustomerBT_Click;
+            deleteCategoryBT.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            deleteCategoryBT.Location = new Point(139, 200);
+            deleteCategoryBT.Name = "deleteCategoryBT";
+            deleteCategoryBT.Size = new Size(76, 30);
+            deleteCategoryBT.TabIndex = 21;
+            deleteCategoryBT.Text = "DELETE";
+            deleteCategoryBT.UseVisualStyleBackColor = true;
+            deleteCategoryBT.Click += deleteCategoryBT_Click;
             // 
-            // editCustomerBT
+            // editCategoryBT
             // 
-            editCustomerBT.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            editCustomerBT.Location = new Point(69, 200);
-            editCustomerBT.Name = "editCustomerBT";
-            editCustomerBT.Size = new Size(64, 30);
-            editCustomerBT.TabIndex = 20;
-            editCustomerBT.Text = "EDIT";
-            editCustomerBT.UseVisualStyleBackColor = true;
-            editCustomerBT.Click += editCustomerBT_Click;
+            editCategoryBT.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            editCategoryBT.Location = new Point(69, 200);
+            editCategoryBT.Name = "editCategoryBT";
+            editCategoryBT.Size = new Size(64, 30);
+            editCategoryBT.TabIndex = 20;
+            editCategoryBT.Text = "EDIT";
+            editCategoryBT.UseVisualStyleBackColor = true;
+            editCategoryBT.Click += editCategoryBT_Click;
             // 
-            // addCustomerBT
+            // addCategoryBT
             // 
-            addCustomerBT.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            addCustomerBT.Location = new Point(11, 200);
-            addCustomerBT.Name = "addCustomerBT";
-            addCustomerBT.Size = new Size(52, 30);
-            addCustomerBT.TabIndex = 19;
-            addCustomerBT.Text = "ADD";
-            addCustomerBT.UseVisualStyleBackColor = true;
-            addCustomerBT.Click += addCustomerBT_Click;
+            addCategoryBT.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            addCategoryBT.Location = new Point(11, 200);
+            addCategoryBT.Name = "addCategoryBT";
+            addCategoryBT.Size = new Size(52, 30);
+            addCategoryBT.TabIndex = 19;
+            addCategoryBT.Text = "ADD";
+            addCategoryBT.UseVisualStyleBackColor = true;
+            addCategoryBT.Click += addCategoryBT_Click;
             // 
             // prodCategoryIdTB
             // 
             prodCategoryIdTB.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            prodCategoryIdTB.ForeColor = Color.Crimson;
+            prodCategoryIdTB.ForeColor = SystemColors.ActiveCaptionText;
             prodCategoryIdTB.Location = new Point(11, 130);
             prodCategoryIdTB.Name = "prodCategoryIdTB";
+            prodCategoryIdTB.PlaceholderText = "Category ID";
             prodCategoryIdTB.Size = new Size(204, 29);
             prodCategoryIdTB.TabIndex = 18;
-            prodCategoryIdTB.Text = "category id";
             // 
             // categoryNameTB
             // 
             categoryNameTB.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            categoryNameTB.ForeColor = Color.Crimson;
+            categoryNameTB.ForeColor = SystemColors.ActiveCaptionText;
             categoryNameTB.Location = new Point(11, 165);
             categoryNameTB.Name = "categoryNameTB";
+            categoryNameTB.PlaceholderText = "Category Name";
             categoryNameTB.Size = new Size(204, 29);
             categoryNameTB.TabIndex = 17;
-            categoryNameTB.Text = "Category Name";
             // 
             // ManageCategories
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(780, 615);
-            Controls.Add(CusHomeBT);
-            Controls.Add(deleteCustomerBT);
-            Controls.Add(editCustomerBT);
-            Controls.Add(addCustomerBT);
+            Controls.Add(CatHomeBT);
+            Controls.Add(deleteCategoryBT);
+            Controls.Add(editCategoryBT);
+            Controls.Add(addCategoryBT);
             Controls.Add(prodCategoryIdTB);
             Controls.Add(categoryNameTB);
             Controls.Add(CategoryGV);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(FooterPanel);
+            Controls.Add(TitleHeaderPanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ManageCategories";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ManageCategories";
             Load += ManageCategories_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            TitleHeaderPanel.ResumeLayout(false);
+            TitleHeaderPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)CategoryGV).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -222,16 +221,16 @@
 
         #endregion
 
-        private Panel panel1;
+        private Panel TitleHeaderPanel;
         private Label label3;
-        private Label label2;
-        private Label label1;
-        private Panel panel2;
+        private Label AppNameLabel;
+        private Label FormTitleLabel;
+        private Panel FooterPanel;
         private DataGridView CategoryGV;
-        private Button CusHomeBT;
-        private Button deleteCustomerBT;
-        private Button editCustomerBT;
-        private Button addCustomerBT;
+        private Button CatHomeBT;
+        private Button deleteCategoryBT;
+        private Button editCategoryBT;
+        private Button addCategoryBT;
         private TextBox prodCategoryIdTB;
         private TextBox categoryNameTB;
     }

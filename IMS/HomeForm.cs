@@ -73,7 +73,7 @@ namespace IMS
         //this will log out the user and take them back to the home page
         private void logoutBT_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1();
+            Login form = new Login();
             form.Show();
             this.Hide();
         }

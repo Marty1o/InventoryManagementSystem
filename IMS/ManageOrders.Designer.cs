@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             panel1 = new Panel();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            panel2 = new Panel();
-            label4 = new Label();
+            ExitAppLabel = new Label();
+            AppNameLabel = new Label();
+            FormNameLabel = new Label();
+            FooterPanel = new Panel();
+            CustomerListLabel = new Label();
             CustomersGV = new DataGridView();
             orderIdTB = new TextBox();
             customerIdTB = new TextBox();
             orderDate = new DateTimePicker();
-            label5 = new Label();
+            OrderDateLabel = new Label();
             searchCB = new ComboBox();
             ProductGV = new DataGridView();
-            label6 = new Label();
+            ItemQuantityLabel = new Label();
             quantityTB = new TextBox();
             addItemQuanBT = new Button();
             OrderGV = new DataGridView();
             customernameTB = new TextBox();
-            label7 = new Label();
+            OrderTotalAmountLabel = new Label();
             totalAmountLB = new Label();
             insertOrderBT = new Button();
             viewOrderBT = new Button();
-            label8 = new Label();
+            OrderIDLabel = new Label();
             button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CustomersGV).BeginInit();
@@ -67,68 +67,68 @@
             // panel1
             // 
             panel1.BackColor = Color.OliveDrab;
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(ExitAppLabel);
+            panel1.Controls.Add(AppNameLabel);
+            panel1.Controls.Add(FormNameLabel);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(1030, 107);
             panel1.TabIndex = 2;
             // 
-            // label3
+            // ExitAppLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(999, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(31, 33);
-            label3.TabIndex = 2;
-            label3.Text = "X";
-            label3.Click += label3_Click;
+            ExitAppLabel.AutoSize = true;
+            ExitAppLabel.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            ExitAppLabel.ForeColor = Color.White;
+            ExitAppLabel.Location = new Point(999, 0);
+            ExitAppLabel.Name = "ExitAppLabel";
+            ExitAppLabel.Size = new Size(31, 33);
+            ExitAppLabel.TabIndex = 2;
+            ExitAppLabel.Text = "X";
+            ExitAppLabel.Click += ExitAppLabel_Click;
             // 
-            // label2
+            // AppNameLabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(174, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(499, 38);
-            label2.TabIndex = 1;
-            label2.Text = "Inventory Management System";
+            AppNameLabel.AutoSize = true;
+            AppNameLabel.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            AppNameLabel.ForeColor = Color.White;
+            AppNameLabel.Location = new Point(262, 9);
+            AppNameLabel.Name = "AppNameLabel";
+            AppNameLabel.Size = new Size(499, 38);
+            AppNameLabel.TabIndex = 1;
+            AppNameLabel.Text = "Inventory Management System";
             // 
-            // label1
+            // FormNameLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(288, 59);
-            label1.Name = "label1";
-            label1.Size = new Size(221, 33);
-            label1.TabIndex = 0;
-            label1.Text = "Manage Orders";
+            FormNameLabel.AutoSize = true;
+            FormNameLabel.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            FormNameLabel.ForeColor = Color.White;
+            FormNameLabel.Location = new Point(376, 59);
+            FormNameLabel.Name = "FormNameLabel";
+            FormNameLabel.Size = new Size(221, 33);
+            FormNameLabel.TabIndex = 0;
+            FormNameLabel.Text = "Manage Orders";
             // 
-            // panel2
+            // FooterPanel
             // 
-            panel2.BackColor = Color.OliveDrab;
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 645);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1030, 25);
-            panel2.TabIndex = 13;
+            FooterPanel.BackColor = Color.OliveDrab;
+            FooterPanel.Dock = DockStyle.Bottom;
+            FooterPanel.Location = new Point(0, 645);
+            FooterPanel.Name = "FooterPanel";
+            FooterPanel.Size = new Size(1030, 25);
+            FooterPanel.TabIndex = 13;
             // 
-            // label4
+            // CustomerListLabel
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = SystemColors.Highlight;
-            label4.Location = new Point(12, 119);
-            label4.Name = "label4";
-            label4.Size = new Size(152, 24);
-            label4.TabIndex = 3;
-            label4.Text = "Customers List";
+            CustomerListLabel.AutoSize = true;
+            CustomerListLabel.Font = new Font("Century Gothic", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            CustomerListLabel.ForeColor = SystemColors.Highlight;
+            CustomerListLabel.Location = new Point(12, 119);
+            CustomerListLabel.Name = "CustomerListLabel";
+            CustomerListLabel.Size = new Size(152, 24);
+            CustomerListLabel.TabIndex = 3;
+            CustomerListLabel.Text = "Customers List";
             // 
             // CustomersGV
             // 
@@ -136,20 +136,20 @@
             CustomersGV.AllowUserToDeleteRows = false;
             CustomersGV.AllowUserToResizeColumns = false;
             CustomersGV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            CustomersGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            CustomersGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             CustomersGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             CustomersGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             CustomersGV.BackgroundColor = Color.Silver;
             CustomersGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.Crimson;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            CustomersGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.Crimson;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
+            CustomersGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             CustomersGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             CustomersGV.Location = new Point(12, 146);
             CustomersGV.Name = "CustomersGV";
@@ -165,9 +165,9 @@
             orderIdTB.ForeColor = Color.Crimson;
             orderIdTB.Location = new Point(12, 420);
             orderIdTB.Name = "orderIdTB";
+            orderIdTB.PlaceholderText = "Order Id";
             orderIdTB.Size = new Size(217, 29);
             orderIdTB.TabIndex = 18;
-            orderIdTB.TextChanged += orderIdTB_TextChanged;
             // 
             // customerIdTB
             // 
@@ -176,6 +176,7 @@
             customerIdTB.ForeColor = Color.Crimson;
             customerIdTB.Location = new Point(12, 455);
             customerIdTB.Name = "customerIdTB";
+            customerIdTB.PlaceholderText = "Customer Id";
             customerIdTB.Size = new Size(217, 29);
             customerIdTB.TabIndex = 19;
             // 
@@ -187,17 +188,16 @@
             orderDate.Size = new Size(217, 23);
             orderDate.TabIndex = 20;
             // 
-            // label5
+            // OrderDateLabel
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = SystemColors.Highlight;
-            label5.Location = new Point(12, 522);
-            label5.Name = "label5";
-            label5.Size = new Size(92, 20);
-            label5.TabIndex = 21;
-            label5.Text = "Order Date";
-            label5.Click += label5_Click;
+            OrderDateLabel.AutoSize = true;
+            OrderDateLabel.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            OrderDateLabel.ForeColor = SystemColors.Highlight;
+            OrderDateLabel.Location = new Point(12, 522);
+            OrderDateLabel.Name = "OrderDateLabel";
+            OrderDateLabel.Size = new Size(92, 20);
+            OrderDateLabel.TabIndex = 21;
+            OrderDateLabel.Text = "Order Date";
             // 
             // searchCB
             // 
@@ -217,17 +217,17 @@
             ProductGV.AllowUserToDeleteRows = false;
             ProductGV.AllowUserToResizeColumns = false;
             ProductGV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            ProductGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            ProductGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             ProductGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ProductGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle4.BackColor = Color.Crimson;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            ProductGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = Color.Crimson;
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle10.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
+            ProductGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             ProductGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             ProductGV.Location = new Point(448, 146);
             ProductGV.Name = "ProductGV";
@@ -237,16 +237,16 @@
             ProductGV.TabIndex = 28;
             ProductGV.CellContentClick += ProductGV_CellContentClick;
             // 
-            // label6
+            // ItemQuantityLabel
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.ForeColor = SystemColors.Highlight;
-            label6.Location = new Point(262, 391);
-            label6.Name = "label6";
-            label6.Size = new Size(80, 21);
-            label6.TabIndex = 30;
-            label6.Text = "Quantity";
+            ItemQuantityLabel.AutoSize = true;
+            ItemQuantityLabel.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ItemQuantityLabel.ForeColor = SystemColors.Highlight;
+            ItemQuantityLabel.Location = new Point(262, 391);
+            ItemQuantityLabel.Name = "ItemQuantityLabel";
+            ItemQuantityLabel.Size = new Size(80, 21);
+            ItemQuantityLabel.TabIndex = 30;
+            ItemQuantityLabel.Text = "Quantity";
             // 
             // quantityTB
             // 
@@ -274,17 +274,17 @@
             OrderGV.AllowUserToDeleteRows = false;
             OrderGV.AllowUserToResizeColumns = false;
             OrderGV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            OrderGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
+            OrderGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             OrderGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             OrderGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle6.BackColor = Color.Crimson;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            OrderGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.BackColor = Color.Crimson;
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            OrderGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             OrderGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             OrderGV.Location = new Point(261, 420);
             OrderGV.Name = "OrderGV";
@@ -300,19 +300,20 @@
             customernameTB.ForeColor = Color.Crimson;
             customernameTB.Location = new Point(12, 490);
             customernameTB.Name = "customernameTB";
+            customernameTB.PlaceholderText = "Customer Name";
             customernameTB.Size = new Size(217, 29);
             customernameTB.TabIndex = 34;
             // 
-            // label7
+            // OrderTotalAmountLabel
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.ForeColor = SystemColors.Highlight;
-            label7.Location = new Point(770, 392);
-            label7.Name = "label7";
-            label7.Size = new Size(122, 21);
-            label7.TabIndex = 35;
-            label7.Text = "Total Amount:";
+            OrderTotalAmountLabel.AutoSize = true;
+            OrderTotalAmountLabel.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            OrderTotalAmountLabel.ForeColor = SystemColors.Highlight;
+            OrderTotalAmountLabel.Location = new Point(770, 392);
+            OrderTotalAmountLabel.Name = "OrderTotalAmountLabel";
+            OrderTotalAmountLabel.Size = new Size(122, 21);
+            OrderTotalAmountLabel.TabIndex = 35;
+            OrderTotalAmountLabel.Text = "Total Amount:";
             // 
             // totalAmountLB
             // 
@@ -347,17 +348,16 @@
             viewOrderBT.UseVisualStyleBackColor = true;
             viewOrderBT.Click += viewOrderBT_Click;
             // 
-            // label8
+            // OrderIDLabel
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ForeColor = SystemColors.Highlight;
-            label8.Location = new Point(12, 398);
-            label8.Name = "label8";
-            label8.Size = new Size(72, 20);
-            label8.TabIndex = 39;
-            label8.Text = "Order ID";
-            label8.Click += label8_Click;
+            OrderIDLabel.AutoSize = true;
+            OrderIDLabel.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            OrderIDLabel.ForeColor = SystemColors.Highlight;
+            OrderIDLabel.Location = new Point(12, 398);
+            OrderIDLabel.Name = "OrderIDLabel";
+            OrderIDLabel.Size = new Size(72, 20);
+            OrderIDLabel.TabIndex = 39;
+            OrderIDLabel.Text = "Order ID";
             // 
             // button1
             // 
@@ -376,25 +376,25 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1030, 670);
             Controls.Add(button1);
-            Controls.Add(label8);
+            Controls.Add(OrderIDLabel);
             Controls.Add(viewOrderBT);
             Controls.Add(insertOrderBT);
             Controls.Add(totalAmountLB);
-            Controls.Add(label7);
+            Controls.Add(OrderTotalAmountLabel);
             Controls.Add(customernameTB);
             Controls.Add(OrderGV);
             Controls.Add(addItemQuanBT);
             Controls.Add(quantityTB);
-            Controls.Add(label6);
+            Controls.Add(ItemQuantityLabel);
             Controls.Add(searchCB);
             Controls.Add(ProductGV);
-            Controls.Add(label5);
+            Controls.Add(OrderDateLabel);
             Controls.Add(orderDate);
             Controls.Add(customerIdTB);
             Controls.Add(orderIdTB);
             Controls.Add(CustomersGV);
-            Controls.Add(label4);
-            Controls.Add(panel2);
+            Controls.Add(CustomerListLabel);
+            Controls.Add(FooterPanel);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ManageOrders";
@@ -413,28 +413,28 @@
         #endregion
 
         private Panel panel1;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private Panel panel2;
-        private Label label4;
+        private Label ExitAppLabel;
+        private Label AppNameLabel;
+        private Label FormNameLabel;
+        private Panel FooterPanel;
+        private Label CustomerListLabel;
         private DataGridView CustomersGV;
         private TextBox orderIdTB;
         private TextBox customerIdTB;
         private DateTimePicker orderDate;
-        private Label label5;
+        private Label OrderDateLabel;
         private ComboBox searchCB;
         private DataGridView ProductGV;
-        private Label label6;
+        private Label ItemQuantityLabel;
         private TextBox quantityTB;
         private Button addItemQuanBT;
         private DataGridView OrderGV;
         private TextBox customernameTB;
-        private Label label7;
+        private Label OrderTotalAmountLabel;
         private Label totalAmountLB;
         private Button insertOrderBT;
         private Button viewOrderBT;
-        private Label label8;
+        private Label OrderIDLabel;
         private Button button1;
     }
 }

@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            panel1 = new Panel();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            panel2 = new Panel();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            HeaderTitlePanel = new Panel();
+            ExitAppLabel = new Label();
+            AppNameLabel = new Label();
+            FormNameLabel = new Label();
+            FooterPanel = new Panel();
             ProductGV = new DataGridView();
-            CusHomeBT = new Button();
-            deleteCustomerBT = new Button();
-            editCustomerBT = new Button();
-            addCustomerBT = new Button();
+            ProdHomeBT = new Button();
+            deleteProductBT = new Button();
+            editProductBT = new Button();
+            addProductBT = new Button();
             prodNameTB = new TextBox();
             prodQuantityTB = new TextBox();
             prodPriceTB = new TextBox();
@@ -49,64 +49,64 @@
             FilterCatCB = new ComboBox();
             prodFilterBT = new Button();
             searchRefreshBT = new Button();
-            panel1.SuspendLayout();
+            HeaderTitlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ProductGV).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // HeaderTitlePanel
             // 
-            panel1.BackColor = Color.OliveDrab;
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(780, 84);
-            panel1.TabIndex = 3;
+            HeaderTitlePanel.BackColor = Color.OliveDrab;
+            HeaderTitlePanel.Controls.Add(ExitAppLabel);
+            HeaderTitlePanel.Controls.Add(AppNameLabel);
+            HeaderTitlePanel.Controls.Add(FormNameLabel);
+            HeaderTitlePanel.Dock = DockStyle.Top;
+            HeaderTitlePanel.Location = new Point(0, 0);
+            HeaderTitlePanel.Name = "HeaderTitlePanel";
+            HeaderTitlePanel.Size = new Size(780, 84);
+            HeaderTitlePanel.TabIndex = 3;
             // 
-            // label3
+            // ExitAppLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(749, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(31, 33);
-            label3.TabIndex = 2;
-            label3.Text = "X";
-            label3.Click += label3_Click;
+            ExitAppLabel.AutoSize = true;
+            ExitAppLabel.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            ExitAppLabel.ForeColor = Color.White;
+            ExitAppLabel.Location = new Point(749, 0);
+            ExitAppLabel.Name = "ExitAppLabel";
+            ExitAppLabel.Size = new Size(31, 33);
+            ExitAppLabel.TabIndex = 2;
+            ExitAppLabel.Text = "X";
+            ExitAppLabel.Click += ExitAppLabel_Click;
             // 
-            // label2
+            // AppNameLabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(174, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(499, 38);
-            label2.TabIndex = 1;
-            label2.Text = "Inventory Management System";
+            AppNameLabel.AutoSize = true;
+            AppNameLabel.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            AppNameLabel.ForeColor = Color.White;
+            AppNameLabel.Location = new Point(174, 9);
+            AppNameLabel.Name = "AppNameLabel";
+            AppNameLabel.Size = new Size(499, 38);
+            AppNameLabel.TabIndex = 1;
+            AppNameLabel.Text = "Inventory Management System";
             // 
-            // label1
+            // FormNameLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(276, 47);
-            label1.Name = "label1";
-            label1.Size = new Size(249, 33);
-            label1.TabIndex = 0;
-            label1.Text = "Manage Products";
+            FormNameLabel.AutoSize = true;
+            FormNameLabel.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            FormNameLabel.ForeColor = Color.White;
+            FormNameLabel.Location = new Point(276, 47);
+            FormNameLabel.Name = "FormNameLabel";
+            FormNameLabel.Size = new Size(249, 33);
+            FormNameLabel.TabIndex = 0;
+            FormNameLabel.Text = "Manage Products";
             // 
-            // panel2
+            // FooterPanel
             // 
-            panel2.BackColor = Color.OliveDrab;
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 590);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(780, 25);
-            panel2.TabIndex = 14;
+            FooterPanel.BackColor = Color.OliveDrab;
+            FooterPanel.Dock = DockStyle.Bottom;
+            FooterPanel.Location = new Point(0, 590);
+            FooterPanel.Name = "FooterPanel";
+            FooterPanel.Size = new Size(780, 25);
+            FooterPanel.TabIndex = 14;
             // 
             // ProductGV
             // 
@@ -114,17 +114,17 @@
             ProductGV.AllowUserToDeleteRows = false;
             ProductGV.AllowUserToResizeColumns = false;
             ProductGV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            ProductGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            ProductGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             ProductGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ProductGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle2.BackColor = Color.Crimson;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            ProductGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = Color.Crimson;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            ProductGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             ProductGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             ProductGV.Location = new Point(221, 130);
             ProductGV.Name = "ProductGV";
@@ -134,49 +134,49 @@
             ProductGV.TabIndex = 15;
             ProductGV.CellContentClick += ProductGV_CellContentClick;
             // 
-            // CusHomeBT
+            // ProdHomeBT
             // 
-            CusHomeBT.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CusHomeBT.Location = new Point(12, 383);
-            CusHomeBT.Name = "CusHomeBT";
-            CusHomeBT.Size = new Size(204, 30);
-            CusHomeBT.TabIndex = 24;
-            CusHomeBT.Text = "HOME";
-            CusHomeBT.UseVisualStyleBackColor = true;
-            CusHomeBT.Click += CusHomeBT_Click;
+            ProdHomeBT.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ProdHomeBT.Location = new Point(12, 383);
+            ProdHomeBT.Name = "ProdHomeBT";
+            ProdHomeBT.Size = new Size(204, 30);
+            ProdHomeBT.TabIndex = 24;
+            ProdHomeBT.Text = "HOME";
+            ProdHomeBT.UseVisualStyleBackColor = true;
+            ProdHomeBT.Click += ProdHomeBT_Click;
             // 
-            // deleteCustomerBT
+            // deleteProductBT
             // 
-            deleteCustomerBT.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            deleteCustomerBT.Location = new Point(140, 347);
-            deleteCustomerBT.Name = "deleteCustomerBT";
-            deleteCustomerBT.Size = new Size(76, 30);
-            deleteCustomerBT.TabIndex = 23;
-            deleteCustomerBT.Text = "DELETE";
-            deleteCustomerBT.UseVisualStyleBackColor = true;
-            deleteCustomerBT.Click += deleteCustomerBT_Click;
+            deleteProductBT.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            deleteProductBT.Location = new Point(140, 347);
+            deleteProductBT.Name = "deleteProductBT";
+            deleteProductBT.Size = new Size(76, 30);
+            deleteProductBT.TabIndex = 23;
+            deleteProductBT.Text = "DELETE";
+            deleteProductBT.UseVisualStyleBackColor = true;
+            deleteProductBT.Click += deleteProductBT_Click;
             // 
-            // editCustomerBT
+            // editProductBT
             // 
-            editCustomerBT.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            editCustomerBT.Location = new Point(70, 347);
-            editCustomerBT.Name = "editCustomerBT";
-            editCustomerBT.Size = new Size(64, 30);
-            editCustomerBT.TabIndex = 22;
-            editCustomerBT.Text = "EDIT";
-            editCustomerBT.UseVisualStyleBackColor = true;
-            editCustomerBT.Click += editCustomerBT_Click;
+            editProductBT.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            editProductBT.Location = new Point(70, 347);
+            editProductBT.Name = "editProductBT";
+            editProductBT.Size = new Size(64, 30);
+            editProductBT.TabIndex = 22;
+            editProductBT.Text = "EDIT";
+            editProductBT.UseVisualStyleBackColor = true;
+            editProductBT.Click += editProductBT_Click;
             // 
-            // addCustomerBT
+            // addProductBT
             // 
-            addCustomerBT.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            addCustomerBT.Location = new Point(12, 347);
-            addCustomerBT.Name = "addCustomerBT";
-            addCustomerBT.Size = new Size(52, 30);
-            addCustomerBT.TabIndex = 21;
-            addCustomerBT.Text = "ADD";
-            addCustomerBT.UseVisualStyleBackColor = true;
-            addCustomerBT.Click += addCustomerBT_Click;
+            addProductBT.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            addProductBT.Location = new Point(12, 347);
+            addProductBT.Name = "addProductBT";
+            addProductBT.Size = new Size(52, 30);
+            addProductBT.TabIndex = 21;
+            addProductBT.Text = "ADD";
+            addProductBT.UseVisualStyleBackColor = true;
+            addProductBT.Click += addProductBT_Click;
             // 
             // prodNameTB
             // 
@@ -184,9 +184,9 @@
             prodNameTB.ForeColor = SystemColors.ActiveCaptionText;
             prodNameTB.Location = new Point(11, 165);
             prodNameTB.Name = "prodNameTB";
+            prodNameTB.PlaceholderText = "Name";
             prodNameTB.Size = new Size(204, 29);
             prodNameTB.TabIndex = 20;
-            prodNameTB.Text = "name";
             // 
             // prodQuantityTB
             // 
@@ -194,9 +194,9 @@
             prodQuantityTB.ForeColor = SystemColors.ActiveCaptionText;
             prodQuantityTB.Location = new Point(11, 200);
             prodQuantityTB.Name = "prodQuantityTB";
+            prodQuantityTB.PlaceholderText = "Quantity";
             prodQuantityTB.Size = new Size(204, 29);
             prodQuantityTB.TabIndex = 19;
-            prodQuantityTB.Text = "quantity";
             // 
             // prodPriceTB
             // 
@@ -204,9 +204,9 @@
             prodPriceTB.ForeColor = SystemColors.ActiveCaptionText;
             prodPriceTB.Location = new Point(11, 235);
             prodPriceTB.Name = "prodPriceTB";
+            prodPriceTB.PlaceholderText = "Price";
             prodPriceTB.Size = new Size(204, 29);
             prodPriceTB.TabIndex = 18;
-            prodPriceTB.Text = "price";
             // 
             // productIdTB
             // 
@@ -214,9 +214,9 @@
             productIdTB.ForeColor = SystemColors.ActiveCaptionText;
             productIdTB.Location = new Point(11, 130);
             productIdTB.Name = "productIdTB";
+            productIdTB.PlaceholderText = "Product ID";
             productIdTB.Size = new Size(204, 29);
             productIdTB.TabIndex = 17;
-            productIdTB.Text = "product id";
             // 
             // prodDesTB
             // 
@@ -224,9 +224,9 @@
             prodDesTB.ForeColor = SystemColors.ActiveCaptionText;
             prodDesTB.Location = new Point(12, 270);
             prodDesTB.Name = "prodDesTB";
+            prodDesTB.PlaceholderText = "Description";
             prodDesTB.Size = new Size(204, 29);
             prodDesTB.TabIndex = 25;
-            prodDesTB.Text = "description";
             // 
             // prodCategoryCB
             // 
@@ -282,24 +282,24 @@
             Controls.Add(FilterCatCB);
             Controls.Add(prodCategoryCB);
             Controls.Add(prodDesTB);
-            Controls.Add(CusHomeBT);
-            Controls.Add(deleteCustomerBT);
-            Controls.Add(editCustomerBT);
-            Controls.Add(addCustomerBT);
+            Controls.Add(ProdHomeBT);
+            Controls.Add(deleteProductBT);
+            Controls.Add(editProductBT);
+            Controls.Add(addProductBT);
             Controls.Add(prodNameTB);
             Controls.Add(prodQuantityTB);
             Controls.Add(prodPriceTB);
             Controls.Add(productIdTB);
             Controls.Add(ProductGV);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(FooterPanel);
+            Controls.Add(HeaderTitlePanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ManageProducts";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ManageProducts";
             Load += ManageProducts_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            HeaderTitlePanel.ResumeLayout(false);
+            HeaderTitlePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ProductGV).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -307,16 +307,16 @@
 
         #endregion
 
-        private Panel panel1;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private Panel panel2;
+        private Panel HeaderTitlePanel;
+        private Label ExitAppLabel;
+        private Label AppNameLabel;
+        private Label FormNameLabel;
+        private Panel FooterPanel;
         private DataGridView ProductGV;
-        private Button CusHomeBT;
-        private Button deleteCustomerBT;
-        private Button editCustomerBT;
-        private Button addCustomerBT;
+        private Button ProdHomeBT;
+        private Button deleteProductBT;
+        private Button editProductBT;
+        private Button addProductBT;
         private TextBox prodNameTB;
         private TextBox prodQuantityTB;
         private TextBox prodPriceTB;

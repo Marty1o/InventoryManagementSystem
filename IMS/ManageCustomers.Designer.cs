@@ -28,84 +28,83 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            panel1 = new Panel();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            TitleHeaderPanel = new Panel();
+            ExitAppLabel = new Label();
+            AppTitleLabel = new Label();
+            FormTitleLabel = new Label();
             CemailTB = new TextBox();
             CfullNameTB = new TextBox();
             CphoneTB = new TextBox();
             customerIdTB = new TextBox();
             CustomersGV = new DataGridView();
-            panel2 = new Panel();
+            FooterPanel = new Panel();
             CusHomeBT = new Button();
             deleteCustomerBT = new Button();
             editCustomerBT = new Button();
             addCustomerBT = new Button();
-            panel3 = new Panel();
+            OrderNumPanel = new Panel();
             OrderLabel = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            panel4 = new Panel();
+            OrderTitleLabel = new Label();
+            OrderAmountTitleLabel = new Label();
+            OrderAmountPanel = new Panel();
             AmountLabel = new Label();
-            panel5 = new Panel();
+            LatestDatePanel = new Panel();
             DateLabel = new Label();
-            label7 = new Label();
-            panel1.SuspendLayout();
+            LatestDateTitleLabel = new Label();
+            TitleHeaderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)CustomersGV).BeginInit();
-            panel3.SuspendLayout();
-            panel4.SuspendLayout();
-            panel5.SuspendLayout();
+            OrderNumPanel.SuspendLayout();
+            OrderAmountPanel.SuspendLayout();
+            LatestDatePanel.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // TitleHeaderPanel
             // 
-            panel1.BackColor = Color.OliveDrab;
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(780, 107);
-            panel1.TabIndex = 1;
+            TitleHeaderPanel.BackColor = Color.OliveDrab;
+            TitleHeaderPanel.Controls.Add(ExitAppLabel);
+            TitleHeaderPanel.Controls.Add(AppTitleLabel);
+            TitleHeaderPanel.Controls.Add(FormTitleLabel);
+            TitleHeaderPanel.Dock = DockStyle.Top;
+            TitleHeaderPanel.Location = new Point(0, 0);
+            TitleHeaderPanel.Name = "TitleHeaderPanel";
+            TitleHeaderPanel.Size = new Size(780, 107);
+            TitleHeaderPanel.TabIndex = 1;
             // 
-            // label3
+            // ExitAppLabel
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(749, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(31, 33);
-            label3.TabIndex = 2;
-            label3.Text = "X";
-            label3.Click += label3_Click;
+            ExitAppLabel.AutoSize = true;
+            ExitAppLabel.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            ExitAppLabel.ForeColor = Color.White;
+            ExitAppLabel.Location = new Point(749, 0);
+            ExitAppLabel.Name = "ExitAppLabel";
+            ExitAppLabel.Size = new Size(31, 33);
+            ExitAppLabel.TabIndex = 2;
+            ExitAppLabel.Text = "X";
+            ExitAppLabel.Click += ExitAppLabel_Click;
             // 
-            // label2
+            // AppTitleLabel
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(174, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(499, 38);
-            label2.TabIndex = 1;
-            label2.Text = "Inventory Management System";
+            AppTitleLabel.AutoSize = true;
+            AppTitleLabel.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            AppTitleLabel.ForeColor = Color.White;
+            AppTitleLabel.Location = new Point(174, 9);
+            AppTitleLabel.Name = "AppTitleLabel";
+            AppTitleLabel.Size = new Size(499, 38);
+            AppTitleLabel.TabIndex = 1;
+            AppTitleLabel.Text = "Inventory Management System";
             // 
-            // label1
+            // FormTitleLabel
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(246, 58);
-            label1.Name = "label1";
-            label1.Size = new Size(273, 33);
-            label1.TabIndex = 0;
-            label1.Text = "Manage Customers";
-            label1.Click += label1_Click;
+            FormTitleLabel.AutoSize = true;
+            FormTitleLabel.Font = new Font("Century Gothic", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
+            FormTitleLabel.ForeColor = Color.White;
+            FormTitleLabel.Location = new Point(246, 58);
+            FormTitleLabel.Name = "FormTitleLabel";
+            FormTitleLabel.Size = new Size(273, 33);
+            FormTitleLabel.TabIndex = 0;
+            FormTitleLabel.Text = "Manage Customers";
             // 
             // CemailTB
             // 
@@ -115,7 +114,7 @@
             CemailTB.Name = "CemailTB";
             CemailTB.Size = new Size(204, 29);
             CemailTB.TabIndex = 9;
-            CemailTB.Text = "email";
+            CemailTB.PlaceholderText = "Email";
             // 
             // CfullNameTB
             // 
@@ -125,7 +124,7 @@
             CfullNameTB.Name = "CfullNameTB";
             CfullNameTB.Size = new Size(204, 29);
             CfullNameTB.TabIndex = 8;
-            CfullNameTB.Text = "full name";
+            CfullNameTB.PlaceholderText = "Full Name";
             // 
             // CphoneTB
             // 
@@ -135,7 +134,7 @@
             CphoneTB.Name = "CphoneTB";
             CphoneTB.Size = new Size(204, 29);
             CphoneTB.TabIndex = 7;
-            CphoneTB.Text = "phone";
+            CphoneTB.PlaceholderText = "Phone Number";
             // 
             // customerIdTB
             // 
@@ -145,7 +144,7 @@
             customerIdTB.Name = "customerIdTB";
             customerIdTB.Size = new Size(204, 29);
             customerIdTB.TabIndex = 6;
-            customerIdTB.Text = "CustomerID";
+            customerIdTB.PlaceholderText = "Customer ID";
             // 
             // CustomersGV
             // 
@@ -153,19 +152,19 @@
             CustomersGV.AllowUserToDeleteRows = false;
             CustomersGV.AllowUserToResizeColumns = false;
             CustomersGV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            CustomersGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            CustomersGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             CustomersGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             CustomersGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             CustomersGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.Crimson;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            CustomersGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.Crimson;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            CustomersGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             CustomersGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             CustomersGV.Location = new Point(221, 130);
             CustomersGV.Name = "CustomersGV";
@@ -175,14 +174,14 @@
             CustomersGV.TabIndex = 11;
             CustomersGV.CellContentClick += CustomersGV_CellContentClick;
             // 
-            // panel2
+            // FooterPanel
             // 
-            panel2.BackColor = Color.OliveDrab;
-            panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 590);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(780, 25);
-            panel2.TabIndex = 12;
+            FooterPanel.BackColor = Color.OliveDrab;
+            FooterPanel.Dock = DockStyle.Bottom;
+            FooterPanel.Location = new Point(0, 590);
+            FooterPanel.Name = "FooterPanel";
+            FooterPanel.Size = new Size(780, 25);
+            FooterPanel.TabIndex = 12;
             // 
             // CusHomeBT
             // 
@@ -228,15 +227,15 @@
             addCustomerBT.UseVisualStyleBackColor = true;
             addCustomerBT.Click += addCustomerBT_Click;
             // 
-            // panel3
+            // OrderNumPanel
             // 
-            panel3.BackColor = SystemColors.ActiveCaption;
-            panel3.Controls.Add(OrderLabel);
-            panel3.Controls.Add(label4);
-            panel3.Location = new Point(12, 345);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(200, 70);
-            panel3.TabIndex = 17;
+            OrderNumPanel.BackColor = SystemColors.ActiveCaption;
+            OrderNumPanel.Controls.Add(OrderLabel);
+            OrderNumPanel.Controls.Add(OrderTitleLabel);
+            OrderNumPanel.Location = new Point(12, 345);
+            OrderNumPanel.Name = "OrderNumPanel";
+            OrderNumPanel.Size = new Size(200, 70);
+            OrderNumPanel.TabIndex = 17;
             // 
             // OrderLabel
             // 
@@ -248,40 +247,38 @@
             OrderLabel.Size = new Size(118, 32);
             OrderLabel.TabIndex = 3;
             OrderLabel.Text = "Counter";
-            OrderLabel.Click += label6_Click;
             // 
-            // label4
+            // OrderTitleLabel
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(58, 10);
-            label4.Name = "label4";
-            label4.Size = new Size(88, 18);
-            label4.TabIndex = 3;
-            label4.Text = "# of Orders";
-            label4.Click += label4_Click;
+            OrderTitleLabel.AutoSize = true;
+            OrderTitleLabel.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            OrderTitleLabel.ForeColor = Color.Black;
+            OrderTitleLabel.Location = new Point(58, 10);
+            OrderTitleLabel.Name = "OrderTitleLabel";
+            OrderTitleLabel.Size = new Size(88, 18);
+            OrderTitleLabel.TabIndex = 3;
+            OrderTitleLabel.Text = "# of Orders";
             // 
-            // label5
+            // OrderAmountTitleLabel
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(47, 10);
-            label5.Name = "label5";
-            label5.Size = new Size(112, 18);
-            label5.TabIndex = 3;
-            label5.Text = "Order Amount";
+            OrderAmountTitleLabel.AutoSize = true;
+            OrderAmountTitleLabel.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            OrderAmountTitleLabel.ForeColor = Color.Black;
+            OrderAmountTitleLabel.Location = new Point(47, 10);
+            OrderAmountTitleLabel.Name = "OrderAmountTitleLabel";
+            OrderAmountTitleLabel.Size = new Size(112, 18);
+            OrderAmountTitleLabel.TabIndex = 3;
+            OrderAmountTitleLabel.Text = "Order Amount";
             // 
-            // panel4
+            // OrderAmountPanel
             // 
-            panel4.BackColor = SystemColors.ActiveCaption;
-            panel4.Controls.Add(AmountLabel);
-            panel4.Controls.Add(label5);
-            panel4.Location = new Point(12, 421);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(200, 71);
-            panel4.TabIndex = 18;
+            OrderAmountPanel.BackColor = SystemColors.ActiveCaption;
+            OrderAmountPanel.Controls.Add(AmountLabel);
+            OrderAmountPanel.Controls.Add(OrderAmountTitleLabel);
+            OrderAmountPanel.Location = new Point(12, 421);
+            OrderAmountPanel.Name = "OrderAmountPanel";
+            OrderAmountPanel.Size = new Size(200, 71);
+            OrderAmountPanel.TabIndex = 18;
             // 
             // AmountLabel
             // 
@@ -294,15 +291,15 @@
             AmountLabel.TabIndex = 4;
             AmountLabel.Text = "Counter";
             // 
-            // panel5
+            // LatestDatePanel
             // 
-            panel5.BackColor = SystemColors.ActiveCaption;
-            panel5.Controls.Add(DateLabel);
-            panel5.Controls.Add(label7);
-            panel5.Location = new Point(12, 498);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(200, 71);
-            panel5.TabIndex = 19;
+            LatestDatePanel.BackColor = SystemColors.ActiveCaption;
+            LatestDatePanel.Controls.Add(DateLabel);
+            LatestDatePanel.Controls.Add(LatestDateTitleLabel);
+            LatestDatePanel.Location = new Point(12, 498);
+            LatestDatePanel.Name = "LatestDatePanel";
+            LatestDatePanel.Size = new Size(200, 71);
+            LatestDatePanel.TabIndex = 19;
             // 
             // DateLabel
             // 
@@ -315,78 +312,78 @@
             DateLabel.TabIndex = 4;
             DateLabel.Text = "Date";
             // 
-            // label7
+            // LatestDateTitleLabel
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.Black;
-            label7.Location = new Point(47, 10);
-            label7.Name = "label7";
-            label7.Size = new Size(96, 18);
-            label7.TabIndex = 3;
-            label7.Text = "Latest Order";
+            LatestDateTitleLabel.AutoSize = true;
+            LatestDateTitleLabel.Font = new Font("Century Gothic", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            LatestDateTitleLabel.ForeColor = Color.Black;
+            LatestDateTitleLabel.Location = new Point(47, 10);
+            LatestDateTitleLabel.Name = "LatestDateTitleLabel";
+            LatestDateTitleLabel.Size = new Size(96, 18);
+            LatestDateTitleLabel.TabIndex = 3;
+            LatestDateTitleLabel.Text = "Latest Order";
             // 
             // ManageCustomers
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(780, 615);
-            Controls.Add(panel5);
-            Controls.Add(panel4);
-            Controls.Add(panel3);
+            Controls.Add(LatestDatePanel);
+            Controls.Add(OrderAmountPanel);
+            Controls.Add(OrderNumPanel);
             Controls.Add(CusHomeBT);
             Controls.Add(deleteCustomerBT);
             Controls.Add(editCustomerBT);
             Controls.Add(addCustomerBT);
-            Controls.Add(panel2);
+            Controls.Add(FooterPanel);
             Controls.Add(CustomersGV);
             Controls.Add(CemailTB);
             Controls.Add(CfullNameTB);
             Controls.Add(CphoneTB);
             Controls.Add(customerIdTB);
-            Controls.Add(panel1);
+            Controls.Add(TitleHeaderPanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ManageCustomers";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ManageCustomers";
             Load += ManageCustomers_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            TitleHeaderPanel.ResumeLayout(false);
+            TitleHeaderPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)CustomersGV).EndInit();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
+            OrderNumPanel.ResumeLayout(false);
+            OrderNumPanel.PerformLayout();
+            OrderAmountPanel.ResumeLayout(false);
+            OrderAmountPanel.PerformLayout();
+            LatestDatePanel.ResumeLayout(false);
+            LatestDatePanel.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Panel panel1;
-        private Label label3;
-        private Label label2;
-        private Label label1;
+        private Panel TitleHeaderPanel;
+        private Label ExitAppLabel;
+        private Label AppTitleLabel;
+        private Label FormTitleLabel;
         private TextBox CemailTB;
         private TextBox CfullNameTB;
         private TextBox CphoneTB;
         private TextBox customerIdTB;
-        private Panel panel2;
+        private Panel FooterPanel;
         private Button CusHomeBT;
         private Button deleteCustomerBT;
         private Button editCustomerBT;
         private Button addCustomerBT;
         private DataGridView CustomersGV;
-        private Panel panel3;
-        private Label label4;
+        private Panel OrderNumPanel;
+        private Label OrderTitleLabel;
         private Label OrderLabel;
-        private Label label5;
-        private Panel panel4;
+        private Label OrderAmountTitleLabel;
+        private Panel OrderAmountPanel;
         private Label AmountLabel;
-        private Panel panel5;
+        private Panel LatestDatePanel;
         private Label DateLabel;
-        private Label label7;
+        private Label LatestDateTitleLabel;
     }
 }

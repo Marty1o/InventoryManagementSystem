@@ -49,10 +49,7 @@ namespace IMS
             Application.Exit();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void ManageCategories_Load(object sender, EventArgs e)
         {
@@ -71,44 +68,35 @@ namespace IMS
             //MessageBox.Show(CategoryGV.SelectedRows.Count.ToString());
         }
 
-        private void addCustomerBT_Click(object sender, EventArgs e)
+        private void addCategoryBT_Click(object sender, EventArgs e)
         {
-            try
+            if (ValidateInput())
             {
-                Con.Open();
-                SqlCommand command = new SqlCommand("insert into CategoryTable values('" + prodCategoryIdTB.Text + "','" + categoryNameTB.Text + "')", Con);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Category has successfully been added!");
-                Con.Close();
-                refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error updating user: " + ex.Message);
+                try
+                {
+                    Con.Open();
+                    SqlCommand command = new SqlCommand("insert into CategoryTable values('" + prodCategoryIdTB.Text + "','" + categoryNameTB.Text + "')", Con);
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Category has successfully been added!");
+                    Con.Close();
+                    refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating user: " + ex.Message);
+                }
             }
         }
 
-        private void deleteCustomerBT_Click(object sender, EventArgs e)
+        private void deleteCategoryBT_Click(object sender, EventArgs e)
         {
-            if (prodCategoryIdTB.Text == "")
-            {
-                MessageBox.Show("Please enter a valid category id number!");
-                return;
-            }
-
-            else if (Regex.IsMatch(prodCategoryIdTB.Text, "[a-zA-Z]"))
-            {
-                MessageBox.Show("Textbox contains alphabetical characters.");
-                return;
-            }
-
-            else
+            if (ValidateInput())
             {
                 try
                 {
                     Con.Open();
 
-                    string query = "delete from CategoryTable where CategoryId = '" + prodCategoryIdTB.Text + "';";
+                    string query = "delete from CategoryTable where CatId = '" + prodCategoryIdTB.Text + "';";
                     SqlCommand command = new SqlCommand(query, Con);
                     command.ExecuteNonQuery();
                     MessageBox.Show("Category has now been deleted");
@@ -121,33 +109,61 @@ namespace IMS
                 {
                     MessageBox.Show("Error deleting user: " + ex.Message);
                 }
-
             }
         }
 
         // method used to edit the categories, data is pulled and then updated via cat id
-        private void editCustomerBT_Click(object sender, EventArgs e)
+        private void editCategoryBT_Click(object sender, EventArgs e)
         {
-            try
+            if (ValidateInput())
             {
-                Con.Open();
-                SqlCommand command = new SqlCommand("update CategoryTable set CatName = '" + categoryNameTB.Text + "' where CatId = '" + prodCategoryIdTB.Text + "'", Con);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Category has successfully been updated!");
-                Con.Close();
-                refresh();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error updating user: " + ex.Message);
+                try
+                {
+                    Con.Open();
+                    SqlCommand command = new SqlCommand("update CategoryTable set CatName = '" + categoryNameTB.Text + "' where CatId = '" + prodCategoryIdTB.Text + "'", Con);
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Category has successfully been updated!");
+                    Con.Close();
+                    refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating user: " + ex.Message);
+                }
             }
         }
 
-        private void CusHomeBT_Click(object sender, EventArgs e)
+        private void CatHomeBT_Click(object sender, EventArgs e)
         {
             HomeForm form = new HomeForm();
             form.Show();
             this.Hide();
+        }
+
+        private bool ValidateInput()
+        {
+            if (string.IsNullOrWhiteSpace(prodCategoryIdTB.Text))
+            {
+                MessageBox.Show("Please enter a value into the Category ID text box.");
+                prodCategoryIdTB.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(categoryNameTB.Text))
+            {
+                MessageBox.Show("Please enter a name into the Category Name text box.");
+                categoryNameTB.Focus();
+                return false;
+            }
+
+            if (Regex.IsMatch(prodCategoryIdTB.Text, "[a-zA-Z]"))
+            {
+                MessageBox.Show("Textbox contains alphabetical characters. Please enter a valid ID number");
+                categoryNameTB.Focus();
+                return false;
+            }
+
+            return true;
         }
     }
 }
